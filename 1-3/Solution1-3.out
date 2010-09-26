@@ -1,0 +1,26 @@
+Aufgabe 1.
+ 
+1 + 2
+3
+1 + 2 = 23
+
+
+Aufgabe 2. 
+
+- Die Variable a nicht als 'final' definieren. Also 'final' weg.
+- Das Semikolon hinter "public static void main(String[] args);" muss weg.
+- vor c/2 ein "(int)" setzen
+
+
+Aufgabe 3.
+
+a + b * c + d * e
+
+
+a + b % c - d
+
+
+a + b - d + d
+
+
+a + b * c / d 

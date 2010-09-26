@@ -1,0 +1,8 @@
+java Divide 
+This program will show the quotient of 
+first number squared and the second number 
+
+Enter the first integer number: 10
+Enter the second integer number: 7
+Result in floating point numbers: 14.285714285714286
+Integer result with shown rest: 14 rest 2
