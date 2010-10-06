@@ -24,11 +24,11 @@ public class Divide
 
         // casting the variables to get floating point result
 
-        result = a * a / b;
-        System.out.println ("Result in floating point numbers: " + (double)result );
+        result = (double) a * a / b;
+        System.out.println ("Result in floating point numbers: " + result );
         
         modulo = a * a % b;
-        System.out.println ("Integer result with shown rest: " + result + " rest " + modulo);        
+        System.out.println ("Integer result with shown rest: " + (a*a/b) + " rest " + modulo);        
     }
 
 }
