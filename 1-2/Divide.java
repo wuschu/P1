@@ -1,3 +1,5 @@
+//Dominik Feller (06-117-949)
+
 // importing Scanner from the library java.util
 import java.util.Scanner;
 
