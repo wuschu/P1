@@ -1,7 +1,11 @@
-/*
- Programmierung 1 HS 2010
- Musterlösung Aufgabe 2-2
-*/
+//****************************************************************************
+//
+//	Dominik Feller
+//	Matrikel-Nr. 06-117-949
+//
+//	Book.java
+//
+//****************************************************************************
 
 import java.util.Date;
 import java.text.*;
@@ -28,15 +32,21 @@ public class Book{
 
 	/** Returns a String representation of the book */
 	public String toString(){
-		//TODO
-		return ""; //this is to avoid compiler errors, replace it!
+		String result = id+", "+title+", "+author+", "+dateOfPublication;
+		return result;
 	}
 
 	/** Reads all book data from user input */
 	public void input() throws ParseException{
 		Scanner scn = new Scanner(System.in);
 		System.out.print("Please enter id: ");
-		//TODO
+		id = scn.nextInt();
+		System.out.println("Please enter the title: ");
+		title = scn.next();
+		System.out.println("Please enter the name of the author: ");
+		author = scn.next();
+		System.out.println("Please enter the date of publication: ");
+		String s = scn.next();
 	}
 
 	// Get-/Set-methods
