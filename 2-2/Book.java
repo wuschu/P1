@@ -21,7 +21,6 @@ public class Book{
 	public static final String DATE_FORMAT = "dd.MM.yyyy";
 
 	// constructors
-	//TODO
 	public Book() throws ParseException
 	{
 		input();
@@ -37,7 +36,7 @@ public class Book{
 		dateOfPublicationMS = dateOfPublication.getTime();
 		diffMS = todaysDateMS - dateOfPublicationMS;
 		diffDays = diffMS/1000/60/60/24;
-		return (int)diffDays; //this is to avoid compiler errors, replace it!
+		return (int)diffDays; 
 	}
 
 	/** Returns a String representation of the book */
@@ -50,20 +49,25 @@ public class Book{
 	/** Reads all book data from user input */
 	public void input() throws ParseException{
 		Scanner scn = new Scanner(System.in);
-		System.out.print("Please enter id: ");
+		
+		System.out.print ("Please enter id: ");
 		id = scn.nextInt();
-		System.out.print("Please enter the title: ");
-		title = scn.next();
-		System.out.print("Please enter the name of the author: ");
-		author = scn.next();
-		System.out.print("Please enter the date of publication in "
+		scn.nextLine();
+		System.out.print ("Please enter the title: ");
+		title = scn.nextLine();
+			
+		System.out.print ("Please enter the name of the author: ");
+		author = scn.nextLine();
+		
+		System.out.print ("Please enter the date of publication in "
 			+ "the format " + DATE_FORMAT + ": ");
-		String s = scn.next();
+		String s = scn.nextLine();
+		
 		dateOfPublication = stringToDate(s);
 	}
 
 	// Get-/Set-methods
-	//TODO
+	
 	public void setId (int bookid)
 	{
 		id = bookid;
