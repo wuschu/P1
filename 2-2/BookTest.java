@@ -33,10 +33,6 @@ public class BookTest
 		book1.setTitle("Die Aufgabe 2-2 von P1");
 		book1.setAuthor("Dominik Feller");
 		book1.setDateOfPublication("10.10.2010");
-		book1.getId();
-		book1.getTitle();
-		book1.getAuthor();
-		book1.getDateOfPublication();
 		
 		System.out.println ("After using the getters and setters: ");
 		System.out.println (book1);
