@@ -46,12 +46,58 @@ public class GuessChess{
 	
 	/** Let the player guess the right field at most MAX_GUESSES times */
 	private void guessField(){
-		// TODO
+		String guess;
+		char column = 'z'; 
+		int row = 0;
+		int attempt = 0;
+		printEmptyBoard();
+		System.out.println();
+		Scanner scan = new Scanner(System.in);
+		while ((attempt < MAX_GUESSES) && ((column!=secretColumn) || (row!=secretRow)))		
+		{
+		System.out.print("You have " + (MAX_GUESSES-attempt) +
+			" attempts left. Guess field (e.g. b3): ");
+		guess = scan.nextLine();
+		column = guess.charAt(0);
+		row = Integer.parseInt(guess.substring(1, 2));
+		
+		System.out.println();
+		
+		if ((column != secretColumn) || (row != secretRow))
+			System.out.print("" + column + row + 
+					" was wrong. Hints: ");
+		if (column < secretColumn)
+			System.out.print("GO RIGHT! ");
+		if (column > secretColumn)
+			System.out.print("GO LEFT! ");
+		if (row < secretRow)
+			System.out.print("GO UP! ");
+		if (row > secretRow)
+			System.out.print("GO DOWN! ");
+		
+		if (column == secretColumn)
+			if (row == secretRow)
+			{
+				System.out.print("That was right! You win!");
+				score++;
+			}
+			
+		System.out.println();
+		printBoard(column, row);
+		attempt++;
+		}
+		if ((column!=secretColumn) || (row!=secretRow))
+			System.out.println("You lose! The secret field was " 
+				+ secretColumn + secretRow);
+				
+		
 	}
 
 	/** Prints the final result (who won how often) */
 	private void printFinalResult(){
-		// TODO
+		System.out.println("GAME OVER!");
+		System.out.println("Final score: you won " + score + " out of "+
+			no_rounds + " rounds.");
 	}
 	
 	

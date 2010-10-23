@@ -47,12 +47,14 @@ public class GuessChess{
 	/** Let the player guess the right field at most MAX_GUESSES times */
 	private void guessField(){
 		String guess;
+		// initialisierung von c & r damit zeile 93 funktioniert
 		char column = 'z'; 
 		int row = 0;
 		int attempt = 0;
 		printEmptyBoard();
 		System.out.println();
 		Scanner scan = new Scanner(System.in);
+		// wenn max_guesses erreicht oder wenn beide (c & r) richtig, dann endet while
 		while ((attempt < MAX_GUESSES) && ((column!=secretColumn) || (row!=secretRow)))		
 		{
 		System.out.print("You have " + (MAX_GUESSES-attempt) +
@@ -75,6 +77,7 @@ public class GuessChess{
 		if (row > secretRow)
 			System.out.print("GO DOWN! ");
 		
+		// wenn sowohl col als auch row stimmen -> sieg; score + 1
 		if (column == secretColumn)
 			if (row == secretRow)
 			{
@@ -84,6 +87,7 @@ public class GuessChess{
 			
 		System.out.println();
 		printBoard(column, row);
+		// anzahl versuche um eins erhoeht, damit zeile 60 aufgeht
 		attempt++;
 		}
 		if ((column!=secretColumn) || (row!=secretRow))
