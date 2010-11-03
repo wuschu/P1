@@ -65,11 +65,8 @@ public class GuessChess{
 		
 		System.out.println();
 		
-<<<<<<< HEAD:3-1/GuessChess.java
 		if (attempt != 2)
 		{
-=======
->>>>>>> 3bdaa72e1ca5de8a9b03d881883bfe48f62746ba:3-1/GuessChess.java
 		if ((column != secretColumn) || (row != secretRow))
 			System.out.print("" + column + row + 
 					" was wrong. Hints: ");
@@ -81,11 +78,8 @@ public class GuessChess{
 			System.out.print("GO UP! ");
 		if (row > secretRow)
 			System.out.print("GO DOWN! ");
-<<<<<<< HEAD:3-1/GuessChess.java
 		}
-=======
 		
->>>>>>> 3bdaa72e1ca5de8a9b03d881883bfe48f62746ba:3-1/GuessChess.java
 		// wenn sowohl col als auch row stimmen -> sieg; score + 1
 		if (column == secretColumn)
 			if (row == secretRow)
