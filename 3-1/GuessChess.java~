@@ -47,14 +47,20 @@ public class GuessChess{
 	/** Let the player guess the right field at most MAX_GUESSES times */
 	private void guessField(){
 		String guess;
+<<<<<<< HEAD:3-1/GuessChess.java~
 		// initialisierung von c & r damit zeile 93 funktioniert
+=======
+>>>>>>> 3bdaa72e1ca5de8a9b03d881883bfe48f62746ba:3-1/GuessChess.java~
 		char column = 'z'; 
 		int row = 0;
 		int attempt = 0;
 		printEmptyBoard();
 		System.out.println();
 		Scanner scan = new Scanner(System.in);
+<<<<<<< HEAD:3-1/GuessChess.java~
 		// wenn max_guesses erreicht oder wenn beide (c & r) richtig, dann endet while
+=======
+>>>>>>> 3bdaa72e1ca5de8a9b03d881883bfe48f62746ba:3-1/GuessChess.java~
 		while ((attempt < MAX_GUESSES) && ((column!=secretColumn) || (row!=secretRow)))		
 		{
 		System.out.print("You have " + (MAX_GUESSES-attempt) +
@@ -77,7 +83,10 @@ public class GuessChess{
 		if (row > secretRow)
 			System.out.print("GO DOWN! ");
 		
+<<<<<<< HEAD:3-1/GuessChess.java~
 		// wenn sowohl col als auch row stimmen -> sieg; score + 1
+=======
+>>>>>>> 3bdaa72e1ca5de8a9b03d881883bfe48f62746ba:3-1/GuessChess.java~
 		if (column == secretColumn)
 			if (row == secretRow)
 			{
@@ -87,7 +96,10 @@ public class GuessChess{
 			
 		System.out.println();
 		printBoard(column, row);
+<<<<<<< HEAD:3-1/GuessChess.java~
 		// anzahl versuche um eins erhoeht, damit zeile 60 aufgeht
+=======
+>>>>>>> 3bdaa72e1ca5de8a9b03d881883bfe48f62746ba:3-1/GuessChess.java~
 		attempt++;
 		}
 		if ((column!=secretColumn) || (row!=secretRow))
