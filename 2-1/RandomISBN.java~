@@ -1,6 +1,16 @@
+<<<<<<< HEAD:2-1/RandomISBN.java~
 /*
 
 */
+=======
+//***************************************************************************
+//
+//	RandomISBN.java
+//	Dominik Feller
+//	Matrikel-Nr.: 06-117-949
+//
+//***************************************************************************
+>>>>>>> f8675247cb7c1c574cdd132826d7dc7ede6b9e0c:2-1/RandomISBN.java~
 
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -24,6 +34,7 @@ public class RandomISBN{
 	/** generates the ISBN using random numbers */
 	private void makeNumber(){
 		Random gen = new Random();
+<<<<<<< HEAD:2-1/RandomISBN.java~
 		DecimalFormat fmt = new DecimalFormat("00");
 		DecimalFormat fmt2 = new DecimalFormat("000");
 		DecimalFormat fmt3 = new DecimalFormat("0");
@@ -32,6 +43,28 @@ public class RandomISBN{
 		bandnr = fmt2.format(gen.nextInt(900) + 100);
 		verlagsnr = fmt.format(gen.nextInt(99) + 1);
 		
+=======
+		
+		// Format fuer laendercode und verlagsnr
+		DecimalFormat fmt = new DecimalFormat("00");
+		
+		// Format fuer bandnr
+		DecimalFormat fmt2 = new DecimalFormat("000");
+		
+		// Format fuer checksum
+		DecimalFormat fmt3 = new DecimalFormat("0");
+		
+		// Generiert eine Zahl zwischen 0 und 99 
+		laendercode = fmt.format(gen.nextInt(100));
+		
+		// Generiert eine Zahl zwischen 100 und 999
+		bandnr = fmt2.format(gen.nextInt(900) + 100);
+		
+		// Generiert eine Zahl zwischen 1 und 99
+		verlagsnr = fmt.format(gen.nextInt(99) + 1);
+		
+		// Auslesen der Strings und umwandeln in Zahlen
+>>>>>>> f8675247cb7c1c574cdd132826d7dc7ede6b9e0c:2-1/RandomISBN.java~
 		int L1 = Integer.parseInt(laendercode.substring(0, 1));
 		int L2 = Integer.parseInt(laendercode.substring(1, 2));
 		int B1 = Integer.parseInt(bandnr.substring(0, 1));
@@ -40,6 +73,10 @@ public class RandomISBN{
 		int V1 = Integer.parseInt(verlagsnr.substring(0, 1));
 		int V2 = Integer.parseInt(verlagsnr.substring(1, 2));
 		
+<<<<<<< HEAD:2-1/RandomISBN.java~
+=======
+		// Berechnung von checksum
+>>>>>>> f8675247cb7c1c574cdd132826d7dc7ede6b9e0c:2-1/RandomISBN.java~
 		checksum = fmt3.format((hashOp(L1)+L2+hashOp(B1)+B2+hashOp(B3)+V1+hashOp(V2))%10);
 		
 	}

@@ -57,7 +57,12 @@ public class RandomISBN{
 		int V2 = Integer.parseInt(verlagsnr.substring(1, 2));
 		
 		// Berechnung von checksum
+<<<<<<< HEAD:2-1/RandomISBN.java
 		checksum = fmt3.format((hashOp(L1)+L2+hashOp(B1)+B2+hashOp(B3)+V1+hashOp(V2))%10);
+=======
+		checksum = fmt3.format((hashOp(L1)+L2+hashOp(B1)+B2+hashOp(B3)+
+			V1+hashOp(V2))%10);
+>>>>>>> f8675247cb7c1c574cdd132826d7dc7ede6b9e0c:2-1/RandomISBN.java
 		
 	}
 
