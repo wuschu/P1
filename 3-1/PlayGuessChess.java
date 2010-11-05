@@ -1,6 +1,6 @@
 /*
-Dominik Feller
-Matrikel-Nr.: 06-117-949
+Dominik Feller & Diego Rodriguez
+Matrikel-Nr.: 06-117-949 & 08-131-252
 
 PlayGuessChess.java
 */
