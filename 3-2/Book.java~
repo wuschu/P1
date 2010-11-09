@@ -1,5 +1,8 @@
 /*
+Dominik Feller
+Matrikel-Nr.: 06-117-949
 
+Book.java
 */
 
 import java.util.Date;
@@ -8,7 +11,7 @@ import java.util.Scanner;
 
 
 public class Book{
-	private int id;
+	private int id, price;
 	private String title;
 	private String author;
 	private Date dateOfPublication;
@@ -16,11 +19,12 @@ public class Book{
 	public static final String DATE_FORMAT = "dd.MM.yyyy";
 
 	// constructors
-	public Book(int tmpId, String tmpTitle, String tmpAuthor, Date tmpDateOfPubl){
+	public Book(int tmpId, String tmpTitle, String tmpAuthor, Date tmpDateOfPubl, int tmpPrice){
 		id = tmpId;
 		title = tmpTitle;
 		author = tmpAuthor;
 		dateOfPublication = tmpDateOfPubl;
+		price = tmpPrice;
 	}
 
 	public Book(){
@@ -28,6 +32,7 @@ public class Book{
 		title = "";
 		author = "";
 		dateOfPublication = new Date();
+		price = 0;
 	}
 
 
@@ -41,7 +46,8 @@ public class Book{
 	/** Returns a String representation of the book */
 	public String toString(){
 		return id + " " + title + ", by " + author +
-			", published " + dateToString(dateOfPublication);
+			", published " + dateToString(dateOfPublication) +
+			", " + price + " CHF";
 	}
 
 	/** Reads all book data from user input */
@@ -55,6 +61,8 @@ public class Book{
 		author = scn.nextLine();
 		System.out.print("Please enter date of publication (e.g. 01.12.2007): ");
 		dateOfPublication = stringToDate(scn.nextLine());
+		System.out.print("Please enter the price of the book: ");
+		price = scn.nextInt();
 	}
 
 
@@ -82,6 +90,12 @@ public class Book{
 	}
 	public void setDateOfPublication(Date newDate){
 		dateOfPublication = newDate;
+	}
+	public int getPrice(){
+		return price;
+	}
+	public void setPrice(int newPrice){
+		price = newPrice;
 	}
 	
 	// private methods --------------------------------------------
