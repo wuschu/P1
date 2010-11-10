@@ -74,12 +74,12 @@ public class VierGewinnt {
 	/** Checks if every position is occupied */
 	private boolean isBoardFull() {
 		// TODO
-		int checkcolumn = 0;
-		int checkrow = 5;
+		int checkColumn = 0;
+		int checkRow = 5;
 		//just look at the top rows of each column.
-		for (checkcolumn = 0; checkcolumn < board.length; checkcolumn++)
+		for (checkColumn = 0; checkColumn < board.length; checkColumn++)
 			//if one of the top fields is empty, then the board is not full = false
-		if (board[checkcolumn][checkrow] == Token.empty)
+		if (board[checkColumn][checkRow] == Token.empty)
 			{
 				return false;
 			}
