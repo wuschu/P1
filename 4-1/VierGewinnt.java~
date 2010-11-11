@@ -57,12 +57,34 @@ public class VierGewinnt {
 	    and returns the row where the token landed */
 	private int insertToken(int column, Token tok){
 		// TODO
+		int row;
+		for (row = 0; row < board[0].length; row++)
+		{
+			if (board[column][row] == Token.empty)
+			{
+				board[column][row] = tok;
+				break;
+			}	
+		}
+		
+		return row;
 	}
 	
 	
 	/** Checks if every position is occupied */
 	private boolean isBoardFull() {
 		// TODO
+		int checkColumn = 0;
+		int checkRow = 5;
+		//just look at the top rows of each column.
+		for (checkColumn = 0; checkColumn < board.length; checkColumn++)
+			//if one of the top fields is empty, then the board is not full = false
+		if (board[checkColumn][checkRow] == Token.empty)
+			{
+				return false;
+			}
+		//but if every top field is NOT empty, the board is full = true
+		return true;
 	}
 	
 	
@@ -70,6 +92,8 @@ public class VierGewinnt {
 	    starting from the given position. */
 	private boolean checkVierGewinnt(int col, int row){
 		//TODO
+		//check horizontal, vertical and 2 times diagonal..
+		return false; //solved;
 	}
 	
 

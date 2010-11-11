@@ -57,17 +57,17 @@ public class VierGewinnt {
 	    and returns the row where the token landed */
 	private int insertToken(int column, Token tok){
 		// TODO
-		int row;
-		for (row = 0; row < board[0].length; row++)
+		int dropRow;
+		for (dropRow = 0; dropRow < board[0].length; dropRow++)
 		{
-			if (board[column][row] == Token.empty)
+			if (board[column][dropRow] == Token.empty)
 			{
-				board[column][row] = tok;
+				board[column][dropRow] = tok;
 				break;
 			}	
 		}
 		
-		return row;
+		return dropRow;
 	}
 	
 	
@@ -91,10 +91,61 @@ public class VierGewinnt {
 	/** Checks for at least four equal tokens in a row in either direction,
 	    starting from the given position. */
 	private boolean checkVierGewinnt(int col, int row){
-		//TODO
-		//check horizontal, vertical and 2 times diagonal..
-		return false; //solved;
+		
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[0].length; j++) {
+				
+				int horizon = 0, vertical = 0, diag1 = 0, diag2 = 0;
+				for (int count=0; count<4; count++) {
+				
+					if (i + count < board.length) {
+						if (board[i+count][j] == board[col][row])
+							horizon++;
+					}
+					
+					if (j+count < board[0].length) {
+						if (board[i][j+count] == board[col][row])
+							vertical++;
+					}
+					
+					if ((i+count < board.length) && (j+count < board[0].length)) {
+						if (board[i+count][j+count] == board[col][row])
+							diag1++;
+					}
+					
+					if ((i-count >=0) && (j+count < board[0].length)) {
+						if (board[i-count][j+count] == board[col][row])
+							diag2++;
+					}
+				}
+				
+				if (horizon==4 || vertical==4 || diag1==4 || diag2==4)
+					return true;
+			}
+		}
+		
+		return false;
 	}
+		
+		// check for vertical win
+//		for ( ; row < 3; row++) {
+///			for ( ; col < 7; col++) {
+//				if (board[col][row] != VierGewinnt.Token.empty &&
+///					board[col][row] == board[col][row+1] &&
+//					board[col][row] == board[col][row+2] &&
+//					board[col][row] == board[col][row+3]) 
+//				{
+//					return true;
+//				}
+//			}
+//		}
+		
+		// check for diagonal win (R)
+		
+		
+		// check for diagonal win (L)
+//	return false;
+//	}
 	
 
 	
