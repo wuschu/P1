@@ -80,7 +80,7 @@ public class VierGewinnt {
 		//just look at the top rows of each column.
 		for (checkColumn = 0; checkColumn < board.length; checkColumn++)
 			//if one of the top fields is empty, then the board is not full = false
-		if (board[checkColumn][checkRow] == Token.empty)
+			if (board[checkColumn][checkRow] == Token.empty)
 			{
 				return false;
 			}
