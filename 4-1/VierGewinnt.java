@@ -126,28 +126,9 @@ public class VierGewinnt {
 		
 		return false;
 	}
-		
-		// check for vertical win
-//		for ( ; row < 3; row++) {
-///			for ( ; col < 7; col++) {
-//				if (board[col][row] != VierGewinnt.Token.empty &&
-///					board[col][row] == board[col][row+1] &&
-//					board[col][row] == board[col][row+2] &&
-//					board[col][row] == board[col][row+3]) 
-//				{
-//					return true;
-//				}
-//			}
-//		}
-		
-		// check for diagonal win (R)
-		
-		
-		// check for diagonal win (L)
-//	return false;
-//	}
-	
 
+	
+	
 	
 	/** returns a "graphical" representation of the board */
 	public static String displayBoard(Token[][] myBoard){
