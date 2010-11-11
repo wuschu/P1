@@ -96,9 +96,9 @@ public class VierGewinnt {
 			for (int j = 0; j < board[0].length; j++) {
 				
 				int horizon = 0, vertical = 0, diag1 = 0, diag2 = 0;
-				for (int count=0; count<4; count++) {
+				for (int count = 0; count < 4; count++) {
 				
-					if (i + count < board.length) {
+					if (i+count < board.length) {
 						if (board[i+count][j] == board[col][row])
 							horizon++;
 					}
