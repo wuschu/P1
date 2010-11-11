@@ -56,10 +56,11 @@ public class VierGewinnt {
 	/** Inserts the token at the specified column (if possible)
 	    and returns the row where the token landed */
 	private int insertToken(int column, Token tok){
-		// TODO
+		
 		int dropRow;
 		for (dropRow = 0; dropRow < board[0].length; dropRow++)
 		{
+			//if the field is empty, drop the token.
 			if (board[column][dropRow] == Token.empty)
 			{
 				board[column][dropRow] = tok;
@@ -73,7 +74,7 @@ public class VierGewinnt {
 	
 	/** Checks if every position is occupied */
 	private boolean isBoardFull() {
-		// TODO
+		
 		int checkColumn = 0;
 		int checkRow = 5;
 		//just look at the top rows of each column.
