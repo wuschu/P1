@@ -1,17 +1,17 @@
-import java.util.Scanner;
+import java.util.Random;
 
-/** A human player class */
+
+/** A random computer player class */
 public class ComputerPlayer implements IPlayer{
-	private Scanner scan = new Scanner(System.in);
 	private VierGewinnt.Token token;
-	
+	Random gen = new Random();
 	public int getNextColumn(VierGewinnt.Token[][] board){
 		System.out.println("\n"+VierGewinnt.displayBoard(board));
 		int column = -1;
 		while(column < 0 || column > board.length){
 			System.out.print("Player "+this.token.toString()
 				+" choose a column between 1 and "+board.length+": ");
-			column = Integer.parseInt(scan.nextLine()) - 1;
+			column = gen.nextInt(7);
 			if(column >= 0 && column < board.length){
 				int topRow = board[0].length-1;
 				if(board[column][topRow] != VierGewinnt.Token.empty){
@@ -31,6 +31,6 @@ public class ComputerPlayer implements IPlayer{
 	}
 	
 	public String getProgrammers(){
-		return "P1 Team";
+		return "Random Feller";
 	}
 }

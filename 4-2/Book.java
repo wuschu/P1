@@ -7,7 +7,7 @@ import java.text.*;
 import java.util.Scanner;
 
 
-public class Book{
+public class Book implements IMedium{
 	private int id;
 	private String title;
 	private String author;
@@ -63,4 +63,8 @@ public class Book{
 	
 	public int getPrice(){ return this.price; }
 	public void setPrice(int price){ this.price = price; }
+	
+	public String getShortDescription() { 
+		return (this.title + ", " + this.year + ", " + this.price + " CHF"); 
+	}
 }
