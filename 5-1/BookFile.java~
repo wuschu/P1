@@ -1,0 +1,33 @@
+import java.util.*;
+import java.io.File;
+
+
+
+public class BookFile{
+	
+	public BookFile(String path){
+	
+	
+	}
+	
+	protected String toLine(Book book){
+	
+	}
+	
+	protected Book parseLine(String line){
+		Scanner scn = new Scanner(new File("books.csv"));
+		while (scn.hasNextLine()){
+			line = scn.nextLine();
+			books.add (line);
+		}
+	}
+	
+	public void save(ArrayList<Book> books){
+		
+	}
+	
+	public ArrayList<Book> load(){
+		
+	}
+	
+}

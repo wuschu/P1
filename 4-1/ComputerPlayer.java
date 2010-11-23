@@ -1,3 +1,10 @@
+/*
+Dominik Feller
+06-117-949
+
+ComputerPlayer.java
+*/
+
 import java.util.Random;
 
 

@@ -1,3 +1,13 @@
+/*
+Dominik Feller
+06-117-949
+
+VierGewinnt.java
+*/
+
+
+
+
 import java.util.Arrays;
 import java.util.Scanner;
 

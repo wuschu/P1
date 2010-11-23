@@ -1,3 +1,10 @@
+/*
+Dominik Feller
+06-117-949
+
+Movie.java
+*/
+
 import java.util.Date;
 import java.text.*;
 import java.util.Scanner;

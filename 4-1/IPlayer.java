@@ -1,3 +1,9 @@
+/*
+Dominik Feller
+06-117-949
+
+IPlayer.java
+*/
 
 /** Inferface for VierGewinnt players */
 public interface IPlayer{

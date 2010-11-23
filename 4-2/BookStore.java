@@ -1,6 +1,8 @@
 /*
- Programmierung 1 HS 2010
- Aufgabe 4-2
+Dominik Feller
+06-117-949
+
+BookStore.java
 */
 
 import java.util.Scanner;

@@ -1,3 +1,9 @@
+/*
+Dominik Feller
+06-117-949
+
+IMedium.java
+*/
 
 public interface IMedium{
 	

@@ -1,3 +1,10 @@
+/*
+Dominik Feller
+06-117-949
+
+HumanPlayer.java
+*/
+
 import java.util.Scanner;
 
 /** A human player class */

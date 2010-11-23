@@ -1,9 +1,4 @@
-/*
-Dominik Feller
-06-117-949
-
-Book.java
-*/
+/* Programmierung 1 HS 2010 Aufgabe 5-1 */
 
 import java.util.Date;
 import java.text.*;
@@ -27,6 +22,10 @@ public class Book implements IMedium{
 	}
 	/** default constructor */
 	public Book(){
+	}
+	
+	public String getShortDescription(){
+		return title+", "+year+", "+price+" CHF";
 	}
 
 	/** Returns a String representation of the book */
@@ -66,8 +65,4 @@ public class Book implements IMedium{
 	
 	public int getPrice(){ return this.price; }
 	public void setPrice(int price){ this.price = price; }
-	
-	public String getShortDescription() { 
-		return (this.title + ", " + this.year + ", " + this.price + " CHF"); 
-	}
 }
