@@ -2,12 +2,10 @@
 //
 //	Dominik Feller, 06-117-949
 //
-//	IMedium.java
+//	BookFileLabelled.java
 //
 //***************************************************************************
 
-public interface IMedium{
-	public int getId();
-	public int getPrice();
-	public String getShortDescription();
-}
+public class BookFileLabelled extends BookFile{
+	
+	
