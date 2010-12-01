@@ -1,4 +1,10 @@
-/* Programmierung 1 HS 2010 Aufgabe 5-1 */
+//***************************************************************************
+//
+//	Dominik Feller, 06-117-949
+//
+//	FileTest.java
+//
+//***************************************************************************
 
 import java.util.*;
 
@@ -31,14 +37,15 @@ public class FileTest{
 		}catch(BookFileException e){  System.out.println("\nInvalid file.\n");  }
 		
 
-
+	}
+}
 
 
 
 		
 		
 		/* ------------ Testing labelled files ------------ */
-		// save books to a labelled file
+/*		// save books to a labelled file
 		file = new BookFileLabelled("books_out.txt");  // note the usage of polymorphism!
 		file.save(list);
 		System.out.println("\nSaved labelled file books_out.txt.\n");
@@ -72,3 +79,4 @@ public class FileTest{
 		}
 	}
 }
+*/

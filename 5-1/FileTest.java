@@ -34,18 +34,18 @@ public class FileTest{
 			result = file.load();
 			System.out.println("Loaded the following objects:");
 			for(Book book : result) System.out.println(book);
-		}catch(BookFileException e){  System.out.println("\nInvalid file.\n");  }
+		}catch(BookFileException e){  System.out.println("\nInvalid file.\n" + e.getMessage());  }
 		
 
-	}
-}
+
+
 
 
 
 		
 		
 		/* ------------ Testing labelled files ------------ */
-/*		// save books to a labelled file
+		// save books to a labelled file
 		file = new BookFileLabelled("books_out.txt");  // note the usage of polymorphism!
 		file.save(list);
 		System.out.println("\nSaved labelled file books_out.txt.\n");
@@ -62,14 +62,14 @@ public class FileTest{
 		
 		
 		// An example of how exceptions are useful
-		file = new BookFile("books.txt");
+		file = new BookFile("books.txt"); // trying to use BookFile, but wrong format... Exception...
 		try{
 			result = file.load();
 			System.out.println("Loaded the following objects:");
 			for(Book book : result) System.out.println(book);
 		}catch(BookFileException e){
 			// try other format
-			System.out.println("Invalid file. Checking if file is labelled...");
+			System.out.println("Invalid file. Checking if file is labelled..." + e.getMessage());
 			file = new BookFileLabelled("books.txt");
 			try{
 				result = file.load();
@@ -79,4 +79,4 @@ public class FileTest{
 		}
 	}
 }
-*/
+
